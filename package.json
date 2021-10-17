@@ -1,0 +1,11 @@
+{
+  "name": "hexoplusplus.installationhelper",
+  "version": "2.0.1-indev-1",
+  "dependencies": {
+    "html-loader": "^2.1.2",
+    "js-yaml": "^4.1.0"
+  },
+  "scripts": {
+    "build":"webpack -c webpack.config.js"
+  }
+}
