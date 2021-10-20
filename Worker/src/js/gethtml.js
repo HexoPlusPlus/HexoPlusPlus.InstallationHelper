@@ -11,7 +11,6 @@ import html_install_start from 'html-loader!../html/src/start.html'
 import html_install_dispatch from 'html-loader!../html/src/dispatch.html'
 
 import html_install_zero from 'html-loader!../html/src/zero.html'
-import html_install_howto from 'html-loader!../html/src/howto.html'
 
 
 const gethtml = (hinfo) => {
@@ -60,8 +59,8 @@ const gethtml = (hinfo) => {
         .preout()
     },
     zero: () => {
-      return html_install_howto
-        .replace(/::BODY::/g, html_install_howto)
+      return html_install_index
+        .replace(/::BODY::/g, html_install_zero)
         .preout()
     },
     dispatch: () => {

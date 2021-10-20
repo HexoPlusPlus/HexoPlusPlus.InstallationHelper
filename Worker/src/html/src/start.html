@@ -75,7 +75,7 @@
                             gc.gh_token = ""
                         }
                         localStorage.setItem("config", JSON.stringify(gc))
-                        document.location.search = "?step=dispatch"
+                        document.location.search = "?step=repohook"
                     }
                 } else {
                     setlog.innerText += "[失败]并不是所有的检查都是通过的，请尝试排查错误，若不知道如何排查，请点击左上角菜单寻求帮助！另外，请确保您的仓库完成集成部署！\n"

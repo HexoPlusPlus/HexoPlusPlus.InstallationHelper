@@ -6,6 +6,8 @@
     "js-yaml": "^4.1.0"
   },
   "scripts": {
-    "build":"webpack -c webpack.config.js"
+    "build":"webpack -c webpack.config.js",
+    "server":"miniflare \"./dist/index.worker.js\" -b hpp_username=admin -b hpp_password=admin -k HKV --https",
+    "b:s":"npm run build && npm run server"
   }
 }

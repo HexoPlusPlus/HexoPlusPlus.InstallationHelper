@@ -60,18 +60,21 @@
                 author: document.getElementById('author').value,
                 domain: document.getElementById('domain').value
             }
-            hel.innerText = `你将以何种方式部署你的博客？`
+            hel.innerText = `你的博客源代码是否为公开？`
             dash.innerHTML = `<select class="mdui-select" id="install_type" mdui-select>
-            <option value="TTT">公有仓库，GithubPage托管，CloudFlareCDN 【推荐】</option>
-            <option value="TTF">公有仓库，GithubPage托管，非CloudFlareCDN</option>
-            <option value="TFF">公有仓库，非GithubPage托管，非CloudFlareCDN</option>
-            <option value="FFTE">私有仓库，CloudFlarePage为CDN【推荐】</option>
-            <option value="FFF">私有仓库，CloudFlareCDN</option>
-            <option value="FFF">私有仓库，非CloudFlareCDN</option>
+            <option value="Pub">公开</option>
+            <option value="Pri">私有</option>
         </select>`
             mdui.mutation()
             docuemnt.getElementById('install_type').addEventListener('change', () => {
-                //是否需要额外提醒或输入？待定
+                switch (docuemnt.getElementById('install_type')) {
+                    case "Pub":
+                        i_config.vis=true
+                    case "Pri":
+                    i_config.vis=false
+                    default:
+                        alert('??')
+                }
             })
 
 
